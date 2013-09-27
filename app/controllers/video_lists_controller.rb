@@ -41,7 +41,7 @@ class VideoListsController < ApplicationController
   # PATCH/PUT /video_lists/1.json
   def update
     respond_to do |format|
-      if @video_list.update(video_list_params)
+      if @video_list.update_attributes(video_list_params)
         format.html { redirect_to @video_list, notice: 'Video list was successfully updated.' }
         format.json { head :no_content }
       else
@@ -69,6 +69,6 @@ class VideoListsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def video_list_params
-      params.require(:video_list).permit(:date, :speaker, :title, :url_es, :url_msg)
+      params.require(:video_list).permit(:date, :speaker, :title, :urles, :urlmsg)
     end
 end
