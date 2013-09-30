@@ -1,1 +1,1 @@
-run "CD: /svr/www/video2db/current && /usr/local/bin/bundle exec rake assets:precompile"
+run "CD /svr/www/video2db/current && /usr/local/bin/bundle exec rake assets:precompile"
